@@ -69,11 +69,16 @@ def pingo():
                     print('')
                     print(Style.BRIGHT + Fore.RED + '[ ERRO (a contagem de pacotes não suporta letras ou pacotes vazios...) ]')
                     print('')
-                    
+
             if contagem == 66:
                 print('')
-                print(Style.BRIGHT + FORE.MAGENTA + '[ EXECUTE ORDER 66 ]')
+                print(Style.BRIGHT + Fore.MAGENTA + '[ EXECUTE ORDER 66 ]')
                 sleep(3)
+
+            elif contagem > 20:
+                print('')
+                print(Fore.RED + '[!]', 'MODO MASSIVO, ATIVANDO QUIET MODE')
+                sleep(5)
 
             system('clear')
             print(Style.RESET_ALL + '-'*70) #DEIXANDO AS LINHAS BRANCAS
@@ -88,9 +93,10 @@ def pingo():
             #SAÍDA DE DADOS ATRIBUÍDOS ACIMA
             print('| Endereço web -> {}'.format(Style.BRIGHT + Fore.GREEN + web))
             if contagem == 66:
-                print('| Quantidade de pacotes -> {}'.format(Fore.MAGENTA + str(contagem)))
+                print('| Quantidade de pacotes -> {}'.format(Style.BRIGHT + Fore.MAGENTA + str(contagem)))
             else:
                 print('| Quantidade de pacotes -> {}'.format(Style.BRIGHT + Fore.GREEN + str(contagem)))
+
 
             print('')
             print('-'*100)
