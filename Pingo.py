@@ -98,7 +98,7 @@ def pingo():
 
             #PING
             if contagem > 20:
-                system('ping -c {} -i 0.01 {}'.format(contagem, web))
+                system('ping -c {} -i 0.01 -q {}'.format(contagem, web))
             else:
                 system('ping -c {} {}'.format(contagem, web))
 
