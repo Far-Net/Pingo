@@ -11,3 +11,7 @@ A Python project that measures network quality using ping, created by a programm
 - git clone https://github.com/Far-Net/Pingo.git or download the zip file
 - use: pip install -r requirements.txt
 - and use: Python Pingo.py
+ 
+
+https://github.com/user-attachments/assets/0c413214-ef66-4a0a-97db-6704ba88ec7c
+
