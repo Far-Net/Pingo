@@ -69,6 +69,11 @@ def pingo():
                     print('')
                     print(Style.BRIGHT + Fore.RED + '[ ERRO (a contagem de pacotes não suporta letras ou pacotes vazios...) ]')
                     print('')
+                    
+            if contagem == 66:
+                print('')
+                print(Style.BRIGHT + FORE.MAGENTA + '[ EXECUTE ORDER 66 ]')
+                sleep(3)
 
             system('clear')
             print(Style.RESET_ALL + '-'*70) #DEIXANDO AS LINHAS BRANCAS
@@ -82,7 +87,10 @@ def pingo():
 
             #SAÍDA DE DADOS ATRIBUÍDOS ACIMA
             print('| Endereço web -> {}'.format(Style.BRIGHT + Fore.GREEN + web))
-            print('| Quantidade de pacotes -> {}'.format(Style.BRIGHT + Fore.GREEN + str(contagem)))
+            if contagem == 66:
+                print('| Quantidade de pacotes -> {}'.format(Fore.MAGENTA + str(contagem)))
+            else:
+                print('| Quantidade de pacotes -> {}'.format(Style.BRIGHT + Fore.GREEN + str(contagem)))
 
             print('')
             print('-'*100)
@@ -157,7 +165,10 @@ def pingo():
                 print('')
 
                 print('| Endereço web alvo -> {}'.format(Style.BRIGHT + Fore.GREEN + web))
-                print('| Pacotes enviados -> {}'.format(Style.BRIGHT + Fore.GREEN + str(contagem)))
+                if contagem == 66:
+                    print('| Pacotes enviados -> {}'.format(Style.BRIGHT + Fore.MAGENTA + str(contagem)))
+                else:
+                    print('| Pacotes enviados -> {}'.format(Style.BRIGHT + Fore.GREEN + str(contagem)))
 
                 tempo_relatorio = str(tempo)
 
