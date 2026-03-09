@@ -4,11 +4,11 @@ from sys import stdout
 from time import sleep
 from pyfiglet import figlet_format
 
-print('I N I T I N G  P I N G O...')
+print('\n', '\033[1;32m[!]\033[m', 'I N I T I N G  P I N G O !')
 sleep(3)
 system('clear')
 
-print(Style.BRIGHT + Fore.CYAN + 'A long time ago in galaxy far, \nfar away....')
+print('\033[1;36mA long time ago in galaxy far, \nfar away....\033[m')
 sleep(4)
 system('clear')
 
@@ -21,13 +21,12 @@ def carregando():
             stdout.flush()
             sleep(0.3)
 
-
 def pingo():
 
         #INICIANDO
         system('clear')
         banner = figlet_format('PINGO!', font = 'lean')
-        print(Style.RESET_ALL + banner, '\n')
+        print('{}{}{}'.format('\033[1;32m', banner, '\033[m'))
 
         continuar = input('| Deseja continuar? (s/n): ').strip()
         while continuar == '':
@@ -59,13 +58,13 @@ def pingo():
             #CONTAGEM DE PACOTES
             while True:
                 try:
-                    contagem = int(input('| Quantos pacotes deseja mandar para {}? '.format(Style.BRIGHT + Fore.BLUE + web)))
+                    contagem = int(input('| Quantos pacotes deseja mandar para {}{}{}? '.format('\033[1;34m', web, '\033[m')))
                     break
 
                     while contagem == '':
                         print('')
                         print(Style.BRIGHT + Fore.RED + '[ ERRO FATAL (número de pacotes não especificado...) ] \n')
-                        contagem = int(input('| Quantos pacotes deseja mandar para {}? '.format(Style.BRIGHT + Fore.BLUE + web)))
+                        contagem = int(input('| Quantos pacotes deseja mandar para {}{}{}? '.format('\033[1;34m', web, '\033[m')))
                         break
 
                 except ValueError:
